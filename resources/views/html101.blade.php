@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop-67160127-g2</title>
+
+    <title>
+        camp-67160127-g2
+    </title>
 
     <style>
         body {
