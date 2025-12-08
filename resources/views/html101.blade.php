@@ -1,54 +1,82 @@
-<!-- resources/views/html101.blade.php -->
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Workshop HTML</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.css">
-    </head>
-    <body>
-        <style>
-            body {
-                font-family: "Sarabun", sans-serif;
-            }
-        </style>
-        <div class="container pt-5">
-            <h1>Workshop #HTML - FORM</h1>
-            <form>
-                <div class="row g-3 align-items-center">
-                    <div class="col-2">
-                        <label for="fname" class="col-form-label">
-                            ชื่อ
-                        </label>
-                    </div>
-                    <div class="col-6">
-                        <input type="text" id="fname" class="form-control">
-                    </div>
-                </div>
-                <div class="row g-3 align-items-center">
-                    <div class="col-2">
-                    <label for="fname" class="col-form-label">
-                            นามสกุล
-                        </label>
-                </div>
-                <div class="col-6">
-                        <input type="text" id="fname" class="form-control">
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-6">
-                        <label for="bdate">
-                            วัน/เดือน/ปี
-                        </label>
-                        <input type="date" id="bdate" class="form-control">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop-67160127-g2</title>
+</head>
+<body>
+  <div class="align-items-center">
+    <div class="col-auto">
+      <label for="fname">First name</label>
+      <input type="text" id="fname" name="fname">
+      <label for="sname">Last name</label>
+      <input type="text" id="sname" name="sname">
+    </div>
+  </div>
+    <div class="align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label">Password</label>
+    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="align-items-center">
+    <label for="date">Birth Date</label>
+    <input type="date">
+  </div>
+  <div class="align-items-center">
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age">
+  </div>
+  <div class="align-itens-center">
+    <label for="gender"> Gender</label>
+    <input type="checkbox" id="male" name="male" value="gender">
+    <label for="text">Male</label>
+    <input type="checkbox" id="female" name="female" value="gender">
+    <label for="text">Female</label>
+  </div>
+  <div class="align-items-center">
+    <label for="picture">Picture</label>
+    <input type="file" id="picture" name="picture">
+  </div>
+  <label for="text">Address</label>
+  <div class="align-items-center">
+    <textarea id="address" name="address" rows="5" cols="50"></textarea>
+  </div>
+  <div class="align-items-center">
+    <label for="favorite-color">Favorite Color</label>
+    <select name="color" id="favorite-color">
+      <option value="red">Red</option>
+      <option value="white">White</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+  </div>
+  <div class="align-items-center">
+    <label for="favorite-song-genere">Favorite Songe Genre</label>
+    <select name="songs" id="favorite-song-genere">
+      <option value="rock">Rock</option>
+      <option value="pop">Pop</option>
+      <option value="country">Country</option>
+      <option value="heavy-metal">Heavy Metal</option>
+    </select>
+  </div>
+  <div class="align-items-center">
+    <input type="checkbox" name="agree" id="agree">
+    <label for="text">Agree to collect data</label>
+  </div>
+  <div class="align-items-center">
+    <button type="button" id="refreshButton">Reset</button>
+    <button type="button" id="refreshButton">Save</button>
+  </div>
+</div>
+<script>
+      const refreshBtn = document.getElementById("refreshButton");
 
+      function handleClick() {
+        window.location.reload();
+      }
+
+      refreshBtn.addEventListener("click", handleClick);
+    </script>
+</body>
+</html>
