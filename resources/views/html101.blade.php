@@ -4,79 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop-67160127-g2</title>
+
+    <style>
+        body {
+            background-color: #1e90ff; /* Blue background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #resetBtn { background: #ff4d4d; color: white; }
+        #saveBtn { background: #4caf50; color: white; }
+    </style>
 </head>
 <body>
-  <div class="align-items-center">
-    <div class="col-auto">
-      <label for="fname">First name</label>
-      <input type="text" id="fname" name="fname">
-      <label for="sname">Last name</label>
-      <input type="text" id="sname" name="sname">
+
+<div class="container">
+
+    <div class="form-group">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="fname">
     </div>
-  </div>
-    <div class="align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword6" class="col-form-label">Password</label>
-    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="align-items-center">
-    <label for="date">Birth Date</label>
-    <input type="date">
-  </div>
-  <div class="align-items-center">
-    <label for="age">Age</label>
-    <input type="text" id="age" name="age">
-  </div>
-  <div class="align-itens-center">
-    <label for="gender"> Gender</label>
-    <input type="checkbox" id="male" name="male" value="gender">
-    <label for="text">Male</label>
-    <input type="checkbox" id="female" name="female" value="gender">
-    <label for="text">Female</label>
-  </div>
-  <div class="align-items-center">
-    <label for="picture">Picture</label>
-    <input type="file" id="picture" name="picture">
-  </div>
-  <label for="text">Address</label>
-  <div class="align-items-center">
-    <textarea id="address" name="address" rows="5" cols="50"></textarea>
-  </div>
-  <div class="align-items-center">
-    <label for="favorite-color">Favorite Color</label>
-    <select name="color" id="favorite-color">
-      <option value="red">Red</option>
-      <option value="white">White</option>
-      <option value="blue">Blue</option>
-      <option value="yellow">Yellow</option>
-    </select>
-  </div>
-  <div class="align-items-center">
-    <label for="favorite-song-genere">Favorite Songe Genre</label>
-    <select name="songs" id="favorite-song-genere">
-      <option value="rock">Rock</option>
-      <option value="pop">Pop</option>
-      <option value="country">Country</option>
-      <option value="heavy-metal">Heavy Metal</option>
-    </select>
-  </div>
-  <div class="align-items-center">
-    <input type="checkbox" name="agree" id="agree">
-    <label for="text">Agree to collect data</label>
-  </div>
-  <div class="align-items-center">
-    <button type="button" id="refreshButton">Reset</button>
-    <button type="button" id="refreshButton">Save</button>
-  </div>
+
+    <div class="form-group">
+        <label for="sname">Last name</label>
+        <input type="text" id="sname" name="sname">
+    </div>
+
+    <div class="form-group">
+        <label for="inputPassword6">Password</label>
+        <input type="password" id="inputPassword6">
+    </div>
+
+    <div class="form-group">
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" id="age">
+    </div>
+
+    <div class="form-group">
+        <label>Gender</label>
+        <label><input type="checkbox"> Male</label>
+        <label><input type="checkbox"> Female</label>
+    </div>
+
+    <div class="form-group">
+        <label for="picture">Picture</label>
+        <input type="file" id="picture">
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <textarea rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="favorite-color">Favorite Color</label>
+        <select id="favorite-color">
+            <option value="red">Red</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="favorite-song-genre">Favorite Song Genre</label>
+        <select id="favorite-song-genre">
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="country">Country</option>
+            <option value="heavy-metal">Heavy Metal</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label><input type="checkbox" id="agree"> Agree to collect data</label>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="resetBtn">Reset</button>
+        <button type="button" id="saveBtn">Save</button>
+    </div>
+
 </div>
+
 <script>
-      const refreshBtn = document.getElementById("refreshButton");
+    document.getElementById("resetBtn").addEventListener("click", () => {
+        location.reload();
+    });
+</script>
 
-      function handleClick() {
-        window.location.reload();
-      }
-
-      refreshBtn.addEventListener("click", handleClick);
-    </script>
 </body>
 </html>
