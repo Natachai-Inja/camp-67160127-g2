@@ -6,9 +6,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop02-67160127-g2</title>
 
-</head>
+    </head>
 
 <body>
 

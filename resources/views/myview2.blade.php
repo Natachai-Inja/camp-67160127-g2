@@ -3,23 +3,26 @@
 @section('content')
 
     <h1>This is my view2</h1>
-    <input type="text" id="myinput" value="input text value">
+    <!-- <input type="text" id="myinput" value="input text value"> -->
 
-    <button onclick="myfunc()">
+    <!-- <button onclick="myfunc()">
         check
     </button>
 
     <button onclick="myfunc3()">
         check
-    </button>
+    </button> -->
+
+    <?php 
+        $myphp = "WOW PHP";
+        $myarry = [1,2,3,4];
+    ?>
+    <h1><?php echo "Hello World"; ?></h1>
+    <h2><?php echo $myphp; ?></h2>
+
+
 
 @endsection
-
-@push('scripts')
-
-    <h1>my view 2 naja</h1>
-
-@endpush
 
 @push('scripts')
 
