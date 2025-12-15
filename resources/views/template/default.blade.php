@@ -46,6 +46,17 @@
             border: 1px solid #ccc;
         }
 
+        input.error,
+        textarea.error,
+        select.error {
+            border-color: red;
+        }
+
+        small {
+            color: red;
+            font-size: 12px;
+        }
+
         .button-group {
             display: flex;
             justify-content: space-between;
@@ -62,14 +73,13 @@
         #resetBtn { background: #ff4d4d; color: white; }
         #saveBtn { background: #4caf50; color: white; }
     </style>
-
+    
 </head>
 
 <body>
 
     <div class="container">
         <h1>
-        template.default.blade.php
         @yield('content')
     </h1>
     </div>
